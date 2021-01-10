@@ -1,0 +1,279 @@
+\documentclass[12pt]{amsart}
+\usepackage{amssymb, latexsym}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{sidecap}
+\usepackage{verbatim}
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+\title{ATU HW LaTeX Code}
+\author{David Gomprecht}
+\date{January 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Sums of Consecutive Integers}
+
+\problem Use Gauss's method to find the sum of all of the integers between 100 and 400 which are multiples of 7.\vspace{.1in}
+
+\problem Suppose the numbers $1,2,3,\dots$ are written in rows, with one number in the first row, two numbers in the second row, three numbers in the third row, and so on. What is the sum of all of the numbers in the first 1000 rows?
+\begin{figure}[h]
+    \centering
+	\scalebox{.8}{\includegraphics{NumbersInRows.pdf}}
+	%\caption{}
+\end{figure}
+
+\problem Write using sigma notation:$1-\frac{2}{2}+\frac{3}{4}-\frac{4}{8}+\frac{5}{16}-\dots$\vspace{.1in}
+
+\problem Write using sigma notation: $x-3x^3+5x^5-\dots +21x^{21}$.\vspace{.1in}
+
+\problem Evaluate $\displaystyle \sum_{j=1}^{99}\Big (\frac{1}{j}-\frac{1}{j+1}\Big )$.\vspace{.1in}
+
+\problem Evaluate $\displaystyle \sum_{k=1}^{99}\frac{1}{k(k+1)}$.\vspace{.1in}
+
+\problem Evaluate $\displaystyle \sum_{i=1}^{99}\frac{1}{i(i+2)}$.\vspace{.1in}
+
+\problem Evaluate $\displaystyle \sum_{j=1}^{999}\frac{2j+1}{j^4+2j^3+j^2}$.\vspace{.1in}
+
+The last four sums above are known as \emph{telescoping sums}. Can you explain why?
+
+\newpage
+
+\section{Sequences and Series}
+
+\problem The fourth term in an arithmetic sequence is $-6$ and the tenth term is 5. Find the first term.\vspace{.05in}%[C]
+
+\problem Determine the first term of an arithmetic sequence in which the common difference is 5 and the sum of the first 38 terms is 3534.\vspace{.05in}%[C]
+
+\problem The eighth term in an arithmetic sequence is 5 and the sum of the first ten terms is 20. Find the first term of the sequence.\vspace{.05in}%[C]
+
+\problem Evaluate $\displaystyle \sum_{k=1}^{20}\big (4k+3\big )$.\vspace{.05in}%[C]
+
+\problem The fifth term of an arithmetic sequence is 10 and the tenth term is 4. \vspace{.05in}
+ 	\begin{enumerate}
+		\item Find the twentieth term in the sequence\vspace{.05in}
+		\item Find a formula for the nth term of the sequence.\vspace{.05in}
+	\end{enumerate}
+
+\problem  For every n, the sum of the first n terms of a certain arithmetic sequence is $2n+3n^2$. Find a formula for the nth term in the sequence.\vspace{.05in}
+
+\problem Find the common ratio is a geometric sequence in which the first term is 1 and the seventh term is 4096.\vspace{.05in}%[C]
+
+\problem Evaluate $\displaystyle \sum_{k=1}^{6}\Big (\frac{2}{3}\Big )^{k+1}$ and $\displaystyle \sum_{k=2}^{6}\Big (\frac{1}{10}\Big )^{k}$\vspace{.05in}%[C]
+
+\problem  A sequence of three real numbers forms an arithmetic progression with a first term of 9.  If 2 is added to the second term and 20 is added to the third term, the three resulting numbers form a geometric progression.  What is the smallest possible value for the third term in the geometric progression?\vspace{.05in}
+
+\newpage
+
+\problem Write each of the following as a fraction.\vspace{.05in}
+\begin{itemize}
+	\item $.\overline{5}$ \vspace{.05in}
+	\item $.1\overline{23}$\vspace{.05in}
+	\item $5.\overline{432}$
+\end{itemize}\vspace{.05in}%[C]
+
+\problem   Sum each series.\vspace{.1in}
+	\begin{enumerate}
+		\item $1+\sqrt{2}+2+\dots + 32$.\vspace{.1in}
+		\item $\frac{2}{3}-\frac{4}{9}+\frac{8}{27}-\dots$.\vspace{.1in}
+		\item $2+8+32+\dots+2048$ \vspace{.1in}
+		\item $54-18+6-2+\dots+\frac{2}{243}$ \vspace{.1in}
+		\item $2-\sqrt{2}+1-\frac{\sqrt{2}}{2}+\frac12-\dots$ \vspace{.1in}
+		\item $192+144+108+\dots$ \vspace{.1in}
+		\item $\frac{1}{7}+\frac{2}{7^2}+\frac{1}{7^3}+\frac{2}{7^4}+\dots$\vspace{.05in}
+	\end{enumerate}
+
+\problem The sum of all the terms in an infinite geometric progression is 6.  The sum of the first two terms is $\frac92$.  Find the possible first terms of the progression.\vspace{.05in}
+
+\problem Prove that the following two sums are convergent, and evaluate the sums.\vspace{.05in}
+\begin{itemize}
+	\item $\displaystyle \sum_{i=1}^{\infty}\frac{1}{i(i+1)}$.\vspace{.1in}
+
+	\item $\displaystyle \sum_{i=1}^{\infty}\frac{1}{i(i+2)}$.
+\end{itemize}\vspace{.05in}
+
+\problem Evaluate $\displaystyle \sum_{k=1}^{\infty}\frac{k}{2^k}$.\vspace{.05in}
+
+\problem Evaluate $\displaystyle \sum_{k=1}^{\infty}\frac{ak+b}{c^k}$, in terms of $a$, $b$, and $c$. ($c>1$)
+
+\newpage
+\section{Combinatorics}
+
+\problem How many diagonals does a 20-sided polygon have?\vspace{.05in}
+
+\problem Nick's Pizza sells small and large pizzas.  There are 9 toppings available, and a pizza can be ordered with any number of toppings.  In how many ways can you order a pizza at Nick's?\vspace{.05in}
+
+\problem In how many ways can 8 soccer teams be divided into two groups of 4?  In how many ways can 8 teams be grouped into 4 pairs? \vspace{.05in}
+
+\problem 9 girls and 3 boys sit in one row of a classroom. However, none of the boys are allowed to sit next to each other.  How many seating arrangements are there?  \vspace{.05in}
+
+\problem Ben and Jon are engaged in an epic chess match.  The first person to win seven games will win the match.  How many different sequences of games won and lost are possible?  (For example, if J stands for a win for Jon and B stands for a win for Ben, one possibility is JJBJBJJJBBJ.) \vspace{.05in}
+
+\problem In how many points do the diagonals of a 20-sided polygon intersect, assuming no three diagonals meet at a point?\vspace{.05in}
+
+\problem Find the coefficient of $x^3$ in the expansion of $(1+x)^7$.\vspace{.05in}
+
+%\problem Find the constant term in the expansion of $(3x^2-\frac{2}{x})^{12}$.\vspace{.05in}
+
+\problem Find the $15^{\text{th}}$ term in the expansion of $(a+b)^{16}$.\vspace{.05in}
+
+\problem  Find the coefficient of $x^5y^7$ in the expansion of $$(2x-y)^{12}.$$%\vspace{.05in}
+
+\problem Find the coefficient of $x^3$ in the expansion of $(x-\frac{1}{x})^9$.\vspace{.05in}
+
+\problem Find the coefficient of $a^6$ in the expansion of $$(2a+\frac{3}{\sqrt a})^{15}.$$%\vspace{.05in}
+
+\problem  Find the constant term in the expansion of $(\frac{2}{x}-3x^2)^{15}$.\vspace{.05in}
+
+\problem  Find the coefficient of $a^3b^4c^5$ in the expansion of $$(3a+4b+5c)^{12}.$$% \newline \vspace{.05in}
+
+%\problem Find the coefficient of $a^4b^5c^6$ in the expansion of $$(2a+3b+5c)^{15}.$$ %\vspace{.05in}
+
+\problem (AMC12 2001) An octopus has eight legs and so wears eight socks and eight sneakers on her feet. In how many ways can she put her sneakers on? (Before the octopus puts a sneaker on her foot she must first put on a sock.  Also, just as you and I have a right and a left leg, our octopus has eight very different legs.)
+%\vspace{.05in}
+
+\problem Prove the \emph{hockey stick identity}: $\displaystyle \sum_{k=m}^n {k\choose m}={{n+1}\choose {m+1}}$ as follows. Consider the first $n+1$ positive integers. ${{n+1}\choose {m+1}}$ is the number of subsets of the set $\{1,2,3,\dots , n+1\}$ of size $m+1$. Every such subset has a largest element. For how many subsets is the largest element $k+1$?
+\vspace{.05in}
+
+On Pascal's triangle, circle the numbers involved in the hockey stick identity with $m=2$ and $n=4$. Do the same for $m=3$ and $n=6$. Do you see where the identity got its name?
+%\vspace{.05in}
+
+%Problem 1.29 also leads to a proof of the hockey stick identity. Do you see how?\vspace{.05in}
+
+\problem How many square regions of a chessboard are there, if the regions have to be unions of (at least one of) the 64 black or white  squares on the board?  What if the chessboard is $n\times n$? Can you see how to use this question to evaluate $1^2+2^2+\dots +n^2$?  Hint: every such square is determined by its lower left and upper right corners, which lie on a diagonal of slope one. Use the hockey stick identity to simplify your answer.% \vspace{.05in}
+
+\problem Show that the sum of all the numbers in the $n^\text{th}$ diagonal of Pascals Triangle is equal to the $n^\text{th}$ Fibonacci number.
+\begin{figure}[!h]
+\scalebox{.4}{\includegraphics{FibPascal}}
+\end{figure}%\vspace{.05in}
+
+\problem $2n$ students, $n$ of whom have studied combinatorics and $n$ of whom have not, are seated in a classroom. Use this scenario to help you write $\sum_{k=0}^n{n \choose k}^2$ in terms of a single binomial coefficient. \vspace{.05in}
+
+
+\newpage
+
+\problem  A penguin takes a walk on a long ladder, starting at the intersection of one of the rungs and one of the sides.  Every step she moves either to the other side of the ladder (on the same rung) or up or down one rung (on the same side).  However, she only moves up on the right side of the ladder, and she only moves down on the left side of the ladder.  How many different sixty step walks return the penguin back to her starting position?.
+
+\begin{figure}[h]
+	\scalebox{.36}{\includegraphics{PenguinOnLadder.pdf}}
+	\caption{A penguin on a ladder}
+\end{figure}
+
+\problem[AIME] The wheel shown below consists of two circles and five spokes, with a label at each point where a spoke meets a circle. A bug walks along the wheel, starting at point $A$. At every step of the process, the bug walks from one labeled point to an adjacent labeled point. Along the inner circle the bug only walks in a counterclockwise direction, and along the outer circle the bug only walks in a clockwise direction. For example, the bug could travel along the path $AJABCHCHIJA$, which has $10$ steps. Let $n$ be the number of paths with $15$ steps that begin and end at point $A$. Find the remainder when $n$ is divided by $1000$.
+\begin{figure}[h]
+	\scalebox{.36}{\includegraphics{Wheelb.pdf}}
+\end{figure}
+
+\newpage
+\section{Induction}
+
+\problem The diagram below suggests a different way of proving that $1+3+5+7+9=5^2$. Extend the argument to prove the general case.
+\begin{figure}[h]
+	\scalebox{.45}{\includegraphics{SumOddsDots.pdf}}
+	%\caption{}
+\end{figure}
+
+Use mathematical induction to prove the following statements. In each problem, be sure to indicate the smallest case for which the statement is valid, if it is not explicitly stated.\vspace{.05in}
+
+\problem $2+7+12+17+\dots +5n-3=\frac{n(5n-1)}{2}$\vspace{.05in}
+
+\problem $1^3+2^3+\dots +n^3=[\frac{n(n+1)}{2}]^2$\vspace{.05in}
+
+\problem $\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\dots +\frac{1}{n\cdot (n+1)}=\frac{n}{n+1}$\vspace{.05in}
+
+\problem $1+2\cdot 2+ 3\cdot 2^2+4\cdot 2^3+\dots +n\cdot 2^{n-1}=(n-1)2^n+1$\vspace{.05in}%, if $n\geq 1$
+
+\problem $x^n-a^n=(x-a)(x^{n-1}+ax^{n-2}+a^2x^{n-3}+\dots +a^{n-1})$\vspace{.05in}%,  if $n\geq 1$
+
+\problem Every natural number can be written as a sum of distinct powers of 2.\vspace{.05in}
+
+\problem A set with $n$ elements has $2^n$ subsets.\vspace{.05in}
+
+\problem $5$ is a factor of $2^{2n+1}+3^{2n+1}$, for all integers $n\geq 0$\vspace{.05in}
+
+\definition \begin{small}Let $F_n$ be the $n^{\text{th}}$ \emph{Fibonacci} number, defined by $F_1=1$, $F_2=1$, and $F_n=F_{n-1}+F_{n-2}$ if $n\geq 3$.  The \emph{Lucas} numbers are defined similarly, except that $L_1=1$ and $L_2=3$.  So, the sequence begins $1,3,4,7,11,18,\dots$.\end{small}
+
+\problem $F_1+F_2+\dots +F_n=F_{n+2}-1$\vspace{.05in}
+
+\problem $L_n=F_{n-1}+F_{n+1}$, for all $n\geq 2$.\vspace{.05in}
+
+\problem $F_1^2+F_2^2+\dots +F_n^2=F_n\cdot F_{n+1}$\vspace{.05in}
+
+\problem Consecutive Fibonacci numbers are relatively prime. That is, the greatest common factor of two consecutive Fibonacci numbers is $1$. \vspace{.05in}
+
+\problem If $r$ is a root of $f(x)=x^2-x-1$, then $r^n=rF_n+F_{n-1}$  ($n\geq 2$)\vspace{.05in}
+
+\problem Let $\alpha$ and $\beta$ be the two roots of $x^2-x-1$. Then $\alpha^n=\alpha F_n+F_{n-1}$ and $\beta^n=\beta F_n+F_{n-1}$.
+Use these two equations to solve for $F_n$ in terms of $n$, $\alpha$, and $\beta$. Then solve for $F_n$ in terms of just $n$, by using the quadratic formula to solve for $\alpha$ and $\beta$. \vspace{.05in}%[C]
+
+\problem $F_{n-1}F_{n+1}=F_n^2+(-1)^n$. \vspace{.05in}
+
+\problem $F_{n+k}=L_kF_n+(-1)^{k+1}F_{n-k}$, for all $n\geq 1$ and all $1\leq k\leq n$. \vspace{.05in}
+
+\problem The number of diagonals in a convex polygon with $n$ sides is $\frac{n(n-3)}{2}$.
+
+\problem The Tower of Hanoi puzzle, with $n$ disks, can be solved in $2^n-1$ moves, and this is the smallest number of moves possible.
+
+\begin{figure}[h]
+	\scalebox{.2}{\includegraphics{TowerOfHanoi}}
+	\caption{The Tower of Hanoi}
+\end{figure}
+
+\problem $6$ is a factor of $n^3+3n^2+2n$, for all integers $n\geq 1$
+
+\problem $\sqrt{n}\leq \frac{1}{\sqrt1}+\frac{1}{\sqrt2}+\frac{1}{\sqrt3}+\dots +\frac{1}{\sqrt{n}}< 2\sqrt{n}$, if $n\geq 1$
+
+\problem $2^{3^n}+1$ is divisible by $3^{n+1}$, for $n\geq 0$.
+
+\problem Among any $2^{n+1}$ natural numbers there are $2^n$ numbers whose sum is a multiple of $2^n$.%\vspace{.05in}
+
+\problem Suppose $n$ is a positive integer. A fair coin is tossed repeatedly until either the number of times the coin has landed heads up is $n$ greater than the number of times the coin has landed tails up or the number of times the coin has landed tails up is greater than the number of times the coin has landed heads up. Find the probability that the last toss of the coin is heads up, and then use induction to prove your formula.
+
+\newpage
+
+\problem Given some squares of various sizes, it is possible to cut them into polygonal pieces and rearrange the pieces to form a single square.
+\begin{figure}[h]
+	\scalebox{.5}{\includegraphics{Pythagorean_dissection}}
+\end{figure}
+
+\problem Use induction to prove that ${n+k-1}\choose {k-1}$ is the coefficient of $x^n$ in the expansion of
+\begin{center}$(1+x+x^2+x^3+\dots )^k$,\end{center} for all $n\geq 0$ and $k\geq 1$.
+\vspace{.1in}
+
+\problem $1^k+2^k+\dots +(n-1)^k < \frac{n^{k+1}}{k+1} < 1^k+2^k+\dots +n^k$, for all positive integers $k$ and $n$.
+\vspace{.1in}
+
+The following problem does not use induction. It will be used in the subsequent problem, which does involve induction.
+\vspace{.1in}
+
+\problem \textbf{(AM-GM)} The Two Variable Arithmetic Mean - Geometric Mean Inequality:
+\begin{center}
+If $a>0$ and $b>0$, then $\displaystyle \frac{a+b}{2}\geq \sqrt{ab}$, with equality only if $a=b$.
+ \end{center}
+Prove the AM-GM algebraically and geometrically.  In both instances, be clear about the circumstances under which there will be equality.
+\begin{itemize}
+		\item For a geometrical proof, given two segments of length $a$ and $b$ consider the circle with diameter $a+b$. Let $h$ be half the length of the chord perpendicular to this diameter and passing through a point which is $a$ from one endpoint and $b$ from the other endpoint of this diameter. Find $h$ in terms of $a$ and $b$. How does $h$ compare to the radius of the circle?
+		\item For an algebraic proof, consider the fact that $(\sqrt{a}-\sqrt{b})^2\geq 0$, since all squares are nonnegative.
+\end{itemize}
+
+ \newpage
+
+\problem[Cauchy's proof of n-variable AM-GM] If $a_1,a_2,\dots , a_n> 0$ then\vspace{.1in}
+\begin{center}
+$\displaystyle  \frac{a_1+\dots + a_n}{n}\geq  \sqrt[n]{a_1a_2\dots a_n}$, with equality only if $a_1=a_2=\dots = a_n.$
+\end{center}
+\vspace{.1in}
+
+\noindent Prove this by following the steps below. (Let $P_n$ represent the $n$-variable AM-GM inequality, for $n\geq 2$.)\vspace{.05in}
+\begin{enumerate}
+	\item Show that $P_n$ implies $P_{2n}$.\vspace{.05in}
+	\item Show that $P_{n}$ implies $P_{n-1}$, if $n>2$. Hint: consider the $n$ numbers $a_1, \dots ,a_{n-1}, \sqrt[n-1]{a_1a_2\dots a_{n-1}}$.\vspace{.05in}
+	\item Use induction, and the previous problem, to prove that $P_n$ is true for all $n\geq 2$.
+\end{enumerate}
+
+\end{document}
