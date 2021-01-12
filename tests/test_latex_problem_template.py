@@ -1,5 +1,5 @@
-from latex_problem_template import __version__
-from latex_problem_template import SolutionTemplateGenerator
+from solution_templates import __version__
+from solution_templates import SolutionTemplateGenerator
 
 
 def test_version():

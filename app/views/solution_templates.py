@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, redirect
 
-from latex_problem_template import SolutionTemplateGenerator, latex_escape
+from solution_templates import SolutionTemplateGenerator, latex_escape
 
 solution_templates = Blueprint(
     "solution_template", __name__, template_folder="templates", static_folder="static"

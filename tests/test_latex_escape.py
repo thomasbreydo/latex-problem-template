@@ -1,4 +1,4 @@
-from latex_problem_template import latex_escape
+from solution_templates import latex_escape
 
 
 def test_latex_escape():

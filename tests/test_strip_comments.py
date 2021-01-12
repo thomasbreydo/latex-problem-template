@@ -1,4 +1,4 @@
-from latex_problem_template import strip_comments
+from solution_templates import strip_comments
 
 
 def test_strip_comments():
