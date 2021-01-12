@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
@@ -20,14 +22,16 @@
             <form method="post" action="/solution-templates">
                 <div class="form-group">
                     <label for="hwCode">Homework LaTeX Code</label>
-                    <textarea class="form-control" id="hwCode" name="hwCode" aria-describedby="hwCodeHelp" rows="3" spellcheck="false"
+                    <textarea class="form-control" id="hwCode" name="hwCode" aria-describedby="hwCodeHelp" rows="3"
+                              spellcheck="false"
                               required></textarea>
                     <small id="hwCodeHelp" class="form-text text-muted">Copy and paste the entire document from
                         Overleaf.</small>
                 </div>
                 <div class="form-group">
                     <label for="unitNumber">Unit Number</label>
-                    <input type="number" class="form-control" id="unitNumber" name="unitNumber" aria-describedby="unitNumberHelp"
+                    <input type="number" class="form-control" id="unitNumber" name="unitNumber"
+                           aria-describedby="unitNumberHelp"
                            required>
                     <small id="unitNumberHelp" class="form-text text-muted">Used to prepend problem numbers (e.g.,
                         problem 9 from unit 3 will be
