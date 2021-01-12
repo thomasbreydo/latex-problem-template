@@ -7,7 +7,9 @@ def test_version():
 
 
 def test_parse():
-    gen = SolutionTemplateGenerator.fromfile("test.tex", 1)
+    gen = SolutionTemplateGenerator.fromfile(
+        "test.tex", unit_number=1, author="Thomas Breydo"
+    )
     template1 = next(iter(gen))
     with open("test1answer.txt") as f:
-        assert f.read() == template1
+        assert f.read() == template1.snip

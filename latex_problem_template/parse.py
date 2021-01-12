@@ -1,5 +1,7 @@
 """Parse the LaTeX of a homework set."""
 from TexSoup import TexSoup
+
+from .strip_comments import strip_comments
 from .types import Filename
 import re
 
@@ -13,7 +15,7 @@ def _clean_problem(problem: str) -> str:
 
 
 def parse_problems(hw_code: str) -> list[str]:
-    soup: TexSoup = TexSoup(hw_code)
+    soup: TexSoup = TexSoup(strip_comments(hw_code))
     document: str = str(soup.document)
     return [_clean_problem(problem) for problem in document.split(PROBLEM_CMD)[1:]]
 

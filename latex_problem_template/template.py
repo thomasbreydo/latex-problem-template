@@ -1,4 +1,4 @@
-"""Define the main template for solutions."""
+"""Define the main template for solution-templates."""
 
 from string import Template
 from textwrap import dedent
@@ -18,7 +18,7 @@ solution_template: Template = Template(
 \theoremstyle{definition}
 \begin{document}
 \title{$number}
-\author{Thomas Breydo}
+\author{$author}
 \date{\today}
 \maketitle
 \newcommand{\isit}[1]{\overset{?}{#1}}

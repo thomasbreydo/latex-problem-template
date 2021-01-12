@@ -8,6 +8,7 @@ authors = ["Thomas Breydo <tbreydo@gmail.com>"]
 python = "^3.9"
 TexSoup = "^0.3.1"
 Flask = "^1.1.2"
+ply = "^3.11"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
