@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect
 
 from latex_problem_template import SolutionTemplateGenerator, latex_escape
 
@@ -18,5 +18,11 @@ def solution_templates_page():
         author=author,
     )
     return render_template(
-        "solution-templates/layout.html", solution_templates=templates_gen
+        "solution-templates/layout.html",
+        solution_templates=list(templates_gen),  # todo remove
     )
+
+
+@solution_templates.route("/solution-templates", methods=["GET"])
+def solution_templates_get():
+    return redirect("/home")
