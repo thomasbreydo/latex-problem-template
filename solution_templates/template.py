@@ -1,4 +1,4 @@
-"""Define the main template for solution-templates."""
+"""Define the main template for templates."""
 
 from string import Template
 from textwrap import dedent
