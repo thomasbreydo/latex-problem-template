@@ -13,26 +13,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
-    <title>Solution Templates</title>
+    <title>Templates | by Thomas Breydo</title>
 </head>
 <body>
 <div class="container mt-5">
     <div class="row justify-content-md-center">
-    {% for solution_template in solution_templates %}
-        <div class="col">
-            <div class="form-group">
-                <form action="https://www.overleaf.com/docs" method="post" target="_blank">
-                    <input type="hidden" id="encoded_snip" name="encoded_snip"
-                           value="{{ solution_template.encoded_snip }}">
-                    <input type="hidden" id="snip_name" name="snip_name"
-                           value="{{ solution_template.snip_name }}">
-                    <button type="submit" class="btn btn-primary pt-3 pb-3 pl-5 pr-5 w-100"><span class="pr-1">Problem {{ solution_template.number }}</span>
-                        <i data-feather="external-link"></i>
-                    </button>
-                </form>
+        <h1>Templates</h1>
+    </div>
+    <div class="row justify-content-md-center">
+        {% for solution_template in solution_templates %}
+            <div class="col">
+                <div class="form-group">
+                    <form action="https://www.overleaf.com/docs" method="post" target="_blank">
+                        <input type="hidden" id="encoded_snip" name="encoded_snip"
+                               value="{{ solution_template.encoded_snip }}">
+                        <input type="hidden" id="snip_name" name="snip_name"
+                               value="{{ solution_template.snip_name }}">
+                        <button type="submit" class="btn btn-primary pt-3 pb-3 pl-5 pr-5 w-100"><span class="pr-1">Problem {{ solution_template.number }}</span>
+                            <i data-feather="external-link"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
     </div>
 </div>
 </body>

@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/pycharm+all,python,flask,macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=pycharm+all,python,flask,macos
+# Created by https://www.toptal.com/developers/gitignore/api/macos,python,pycharm+all,flask
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,python,pycharm+all,flask
 
 ### Flask ###
 instance/*
@@ -153,8 +153,7 @@ dmypy.json
 .LSOverride
 
 # Icon must end with two \r
-Icon
-
+Icon
 
 # Thumbnails
 ._*
@@ -325,4 +324,5 @@ modules.xml
 
 # profiling data
 
-# End of https://www.toptal.com/developers/gitignore/api/pycharm+all,python,flask,macos
+# End of https://www.toptal.com/developers/gitignore/api/macos,python,pycharm+all,flask
+
