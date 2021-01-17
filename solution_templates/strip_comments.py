@@ -1,6 +1,6 @@
 import ply.lex as lex
 
-tokens = (
+tokens: tuple[str, str, str, str, str, str, str, str, str] = (
     "PERCENT",
     "BEGINCOMMENT",
     "ENDCOMMENT",
@@ -12,7 +12,7 @@ tokens = (
     "ESCPCT",
 )
 
-states = (
+states: tuple[tuple[str, str], tuple[str, str], tuple[str, str]] = (
     ("linecomment", "exclusive"),
     ("commentenv", "exclusive"),
     ("verbatim", "exclusive"),

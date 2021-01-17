@@ -45,6 +45,16 @@
                            required>
                     <small id="authorHelp" class="form-text text-muted">Your name.</small>
                 </div>
+                <div class="form-group">
+                    <label for="templateType">Template Type</label>
+                    <select class="form-control" id="templateType" name="templateType">
+                        <option value="basic">Basic</option>
+                        <option value="induction">Induction</option>
+                    </select>
+                </div>
+                {% if error %}
+                    <p class="error text-danger"><strong>{{ error }}</strong></p>
+                {% endif %}
                 <button type="submit" class="btn btn-primary">Create templates</button>
             </form>
         </div>

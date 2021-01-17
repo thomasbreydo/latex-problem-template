@@ -8,7 +8,7 @@ TILDES: Pattern[str] = re.compile(r"~")
 SPACES: Pattern[str] = re.compile(r"(?<![^\\]\\textbackslash)\s")
 
 
-def latex_escape(string: str):
+def latex_escape(string: str) -> str:
     string = string.replace("\\", r"\textbackslash ")
     string = SPACES.sub(r"\\ ", string)
     string = CARETS.sub(r"\\textasciicircum ", string)
