@@ -49,7 +49,7 @@ some $k\ge\maxN$. Then,
 \begin{align*}
     TK.
 \end{align*}
-\item The inductive step: prove true for $n=k+1$:
+\item The inductive step: prove true for $n=k+1$.
 \end{itemize}""",
 )
 _base_template_str: str = r"""\documentclass[12pt]{amsart}
