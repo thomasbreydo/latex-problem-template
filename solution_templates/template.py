@@ -49,7 +49,11 @@ some $k\ge\maxN$. Then,
 \begin{align*}
     TK.
 \end{align*}
-\item The inductive step: prove true for $n=k+1$.
+\item The inductive step: prove true for $n=k+1$. Starting with the
+assumption from inductive hypothesis,
+\begin{align*}
+    TK.
+\end{align*}
 \end{itemize}""",
 )
 _base_template_str: str = r"""\documentclass[12pt]{amsart}
@@ -74,8 +78,8 @@ $preamble
 \maketitle
 
 \textbf{Problem:} $problem
-\vspace{0.5in} $post_problem
-
+\vspace{0.5in}
+$post_problem
 \textbf{Solution:} $solution
 \end{document}"""
 
