@@ -37,15 +37,15 @@ _basic_defaults: Mapping = dict(
 )
 _induction_defaults: Mapping = dict(
     _basic_defaults,
-    preamble=r"\newcommand{\maxN}{TK}",
+    preamble=r"\newcommand{\minN}{TK}",
     solution=r"""
 \begin{itemize}
-\item The base case: prove true for $n=\maxN$.
+\item The base case: prove true for $n=\minN$.
 \begin{align*}
     TK.
 \end{align*}
 \item The inductive hypothesis: assume true for $n=k,$ for
-some $k\ge\maxN$. Then,
+some $k\ge\minN$. Then,
 \begin{align*}
     TK.
 \end{align*}
