@@ -33,9 +33,39 @@
                 <option value="induction">Induction</option>
             </select>
         </div>
+        <div id="moreOptions" class="collapse">
+            <div class="form-group">
+                <label for="preamble">Preamble</label>
+                <textarea class="form-control" id="preamble" name="preamble" aria-describedby="preambleHelp" rows="3"
+                          spellcheck="false"
+                ></textarea>
+                <small id="preambleHelp" class="form-text text-muted">This will be injected into the preamble
+                    of the templates (e.g. <span class="text-monospace">&#x5c;usepackage{cancel}</span>).
+                </small>
+            </div>
+        </div>
+        <p>
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#moreOptions">Show more
+                options
+            </button>
+        </p>
         {% if error %}
             <p class="error text-danger"><strong>{{ error }}</strong></p>
         {% endif %}
         <button type="submit" class="btn btn-primary">Create templates</button>
     </form>
+{% endblock %}
+{% block scripts %}
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="collapse"]').click(function () {
+                $(this).toggleClass("active");
+                if ($(this).hasClass("active")) {
+                    $(this).text("Hide more options");
+                } else {
+                    $(this).text("Show more options");
+                }
+            });
+        })
+    </script>
 {% endblock %}

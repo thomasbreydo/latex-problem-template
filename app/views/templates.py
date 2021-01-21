@@ -1,3 +1,5 @@
+from typing import Optional
+
 from flask import Blueprint, render_template, request, redirect
 
 from solution_templates import SolutionTemplateGenerator, latex_escape
@@ -13,9 +15,14 @@ def templates_page_post():
     unit_number: str = latex_escape(request.form["unitNumber"])
     author: str = latex_escape(request.form["author"])
     template_type: str = request.form["templateType"]
+    preamble: str = request.form["preamble"]
     try:
         templates_gen: SolutionTemplateGenerator = SolutionTemplateGenerator.fromstr(
-            hw_code, unit_number=unit_number, author=author, template_type=template_type
+            hw_code,
+            unit_number=unit_number,
+            author=author,
+            template_type=template_type,
+            preamble=preamble,
         )
     except ValueError:
         return render_template(

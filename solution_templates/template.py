@@ -18,9 +18,9 @@ class DefaultTemplate(Template):
     ) -> Mapping:
         combined_mapping: Mapping = self.defaults.copy()
         if mapping:
-            combined_mapping.update(mapping)
+            combined_mapping.update({k: v for k, v in mapping.items() if v})
         if kws:
-            combined_mapping.update(kws)
+            combined_mapping.update({k: v for k, v in kws.items() if v})
         return combined_mapping
 
     def substitute(self, mapping: Optional[Mapping] = None, /, **kws: Any) -> str:
@@ -33,11 +33,16 @@ class DefaultTemplate(Template):
 
 
 _basic_defaults: Mapping = dict(
-    date=r"\today", preamble="", post_problem="", solution=""
+    date=r"\today",
+    privatepreamble="\n",
+    preamble="",
+    post_problem="",
+    solution="",
 )
 _induction_defaults: Mapping = dict(
     _basic_defaults,
-    preamble=r"\newcommand{\minN}{TK}",
+    privatepreamble=r"\newcommand{\minN}{TK}" + "\n",
+    preamble="",
     solution=r"""
 \begin{itemize}
 \item The base case: prove true for $n=\minN$.
@@ -70,7 +75,7 @@ _base_template_str: str = r"""\documentclass[12pt]{amsart}
 \newcommand{\isit}[1]{\overset{?}{#1}}
 \newcommand{\itis}[1]{\overset{\checkmark}{#1}}
 \newcommand{\then}{\quad\Rightarrow\quad}
-$preamble
+$privatepreamble$preamble
 \begin{document}
 \title{$title}
 \author{$author}

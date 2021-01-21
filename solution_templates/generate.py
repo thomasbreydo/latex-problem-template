@@ -17,6 +17,7 @@ class SolutionTemplate:
     number: str
     author: str
     template: DefaultTemplate
+    preamble: Optional[str]
     snip_name: str
     snip: str
     encoded_snip: str
@@ -31,14 +32,16 @@ class SolutionTemplate:
         number: str,
         author: str,
         template_type: Optional[DefaultTemplate] = None,
+        preamble: Optional[str] = None,
     ):
         self.template = self._get_template(template_type)
         self.problem = problem
         self.number = number
         self.author = author
+        self.preamble = preamble
         self.snip_name = f"{number} {author}"
         self.snip = self.template.substitute(
-            problem=problem, title=number, author=author
+            problem=problem, title=number, author=author, preamble=preamble
         )
         self.encoded_snip = uri_encode(self.snip)
 
@@ -56,6 +59,7 @@ class SolutionTemplateGenerator:
     unit_number: Union[int, str]
     author: str
     template_type: Optional[DefaultTemplate]
+    preamble: Optional[str]
 
     def __init__(
         self,
@@ -63,11 +67,13 @@ class SolutionTemplateGenerator:
         unit_number: Union[int, str],
         author: str,
         template_type: Optional[str] = None,
+        preamble: Optional[str] = None,
     ):
         self.problems = problems
         self.unit_number = unit_number
         self.author = author
         self.template_type = template_type
+        self.preamble = preamble
 
     @classmethod
     def fromfile(
@@ -77,8 +83,11 @@ class SolutionTemplateGenerator:
         unit_number: Union[int, str],
         author: str,
         template_type: Optional[str] = None,
+        preamble: Optional[str] = None,
     ) -> "SolutionTemplateGenerator":
-        return cls(parse_problems_in(file), unit_number, author, template_type)
+        return cls(
+            parse_problems_in(file), unit_number, author, template_type, preamble
+        )
 
     @classmethod
     def fromstr(
@@ -88,8 +97,11 @@ class SolutionTemplateGenerator:
         unit_number: Union[int, str],
         author: str,
         template_type: Optional[str] = None,
+        preamble: Optional[str] = None,
     ) -> "SolutionTemplateGenerator":
-        return cls(parse_problems(hw_code), unit_number, author, template_type)
+        return cls(
+            parse_problems(hw_code), unit_number, author, template_type, preamble
+        )
 
     def __iter__(self) -> Iterator[SolutionTemplate]:
         problem: str
@@ -101,4 +113,5 @@ class SolutionTemplateGenerator:
                 title,
                 self.author,
                 self.template_type,
+                self.preamble,
             )
