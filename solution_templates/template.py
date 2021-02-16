@@ -71,6 +71,7 @@ _base_template_str: str = r"""\documentclass[12pt]{amsart}
 \usepackage{cancel}
 \usepackage{amsthm,mathtools}
 \usepackage{verbatim}
+\usepackage{hyperref}
 \theoremstyle{definition}
 \newcommand{\isit}[1]{\overset{?}{#1}}
 \newcommand{\itis}[1]{\overset{\checkmark}{#1}}
@@ -86,6 +87,8 @@ $privatepreamble$preamble
 \vspace{0.5in}
 $post_problem
 \textbf{Solution:} $solution
+\vspace{0.5in}
+\textbf{Link to Overleaf:} \href{TK}{Click here to open this document in Overleaf.}
 \end{document}"""
 
 
