@@ -38,6 +38,7 @@ _basic_defaults: Mapping = dict(
     preamble="",
     post_problem="",
     solution="",
+    post_solution="",
 )
 _induction_defaults: Mapping = dict(
     _basic_defaults,
@@ -76,6 +77,7 @@ _base_template_str: str = r"""\documentclass[12pt]{amsart}
 \newcommand{\isit}[1]{\overset{?}{#1}}
 \newcommand{\itis}[1]{\overset{\checkmark}{#1}}
 \newcommand{\then}{\quad\Rightarrow\quad}
+\newcommand{\OVERLEAF_SHARING_LINK}{TK}
 $privatepreamble$preamble
 \begin{document}
 \title{$title}
@@ -88,7 +90,8 @@ $privatepreamble$preamble
 $post_problem
 \textbf{Solution:} $solution
 \vspace{0.5in}
-\textbf{Link to Overleaf:} \href{TK}{Click here to open this document in Overleaf.}
+$post_solution
+\textbf{Link to Overleaf:} \href{\OVERLEAF_SHARING_LINK}{Click here to open this document in Overleaf.}
 \end{document}"""
 
 
