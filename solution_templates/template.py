@@ -73,6 +73,8 @@ _base_template_str: str = r"""\documentclass[12pt]{amsart}
 \usepackage{amsthm,mathtools}
 \usepackage{verbatim}
 \usepackage{hyperref}
+\usepackage{physics}
+\setlength\parindent{0pt}
 \theoremstyle{definition}
 \newcommand{\isit}[1]{\overset{?}{#1}}
 \newcommand{\itis}[1]{\overset{\checkmark}{#1}}
