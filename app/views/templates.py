@@ -12,8 +12,6 @@ templates: Blueprint = Blueprint(
 @templates.route("/templates", methods=["POST"])
 def templates_page_post():
     hw_code: str = request.form["hwCode"]
-    if r"\begin{document}" not in hw_code:
-        hw_code = r"\begin{document}" + hw_code + r"\end{document}"
     unit_number: str = latex_escape(request.form["unitNumber"])
     author: str = latex_escape(request.form["author"])
     template_type: str = request.form["templateType"]
